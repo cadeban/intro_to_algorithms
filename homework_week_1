@@ -1,0 +1,55 @@
+/*
+  public class Percolation {
+     public Percolation(int n)                // create n-by-n grid, with all sites blocked
+     public void open(int row, int col)       // open site (row, col) if it is not open already
+     public boolean isOpen(int row, int col)  // is site (row, col) open?
+     public boolean isFull(int row, int col)  // is site (row, col) full?
+     public boolean percolates()              // does the system percolate?
+
+     public static void main(String[] args)   // test client (optional)
+  }
+ */
+
+class Percolation {
+  constructor(n){
+    this.grid = []
+    
+    while (this.grid.length < n) {
+      let temp = [];
+      while (temp.length < n) {
+        temp.push(0);
+      }
+      this.grid.push(temp);
+    }
+
+  }
+
+  open (row, col){
+
+  }
+
+  isOpen (row, col) {
+    return this.grid[row, col] === 1;
+  }
+
+  isFull (row, col) {
+
+  }
+
+  percolates () {
+
+  }
+}
+
+
+/*
+  public class PercolationStats {
+   public PercolationStats(int n, int trials)    // perform trials independent experiments on an n-by-n grid
+   public double mean()                          // sample mean of percolation threshold
+   public double stddev()                        // sample standard deviation of percolation threshold
+   public double confidenceLo()                  // low  endpoint of 95% confidence interval
+   public double confidenceHi()                  // high endpoint of 95% confidence interval
+
+   public static void main(String[] args)    // test client (described below)
+  }
+*/
