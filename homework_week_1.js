@@ -178,12 +178,18 @@ class Percolation {
   proportional to n2 or better.
 
   Answer:
-    // sort array n
+    // sort array
     // loop over array n, where i = current index
-    // loop over array n, where j = i + 1
+    // loop over array n, where j = i + 1 (quadratic)
     // add array n[i] + array n[j] for currentTotal
-    // currentTotal + x === 0
-    // binary search for x
+    // binary search for remainder
+    
+  Alternative:
+    // translate array into object (linear) and keep track
+    // loop over array n, where i = current index
+    // loop over array n, where j = i + 1 (quadratic)
+    // add array n[i] + array n[j] for currentTotal
+    // look up in object for that number (constant)
 
 2. Search in a bitonic array.
 
@@ -200,8 +206,12 @@ class Percolation {
   Answer:
     // bitonic array n (increasing seq of ints followed by decreasing seq of ints)
     // determines whether a given int is in an array
-    // split array into two (n)? sort array (n)?
-    // binary search for given int
+    // split array into two (linear)
+    // binary search for given int in each array (lg n)
+
+    // alternative:
+      // translate array into object (linear)
+      // look up item in object (constant)
 
 3. Egg drop.
 
